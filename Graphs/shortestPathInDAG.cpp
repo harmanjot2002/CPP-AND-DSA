@@ -91,8 +91,7 @@ void Graph::shortestPath(int s)
 		(dist[i] == INF)? cout << "INF ": cout << dist[i] << " "; 
 } 
 
-int main() 
-{ 
+int main() { 
 	Graph g(6); 
 	g.addEdge(0, 1, 2); 
 	g.addEdge(0, 4, 1); 
