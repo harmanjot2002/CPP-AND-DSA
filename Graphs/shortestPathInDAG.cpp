@@ -6,10 +6,12 @@ class AdjListNode
 { 
 	int v; 
 	int weight; 
-public: 
-	AdjListNode(int _v, int _w) { v = _v; weight = _w;} 
-	int getV()	 { return v; } 
-	int getWeight() { return weight; } 
+    public: 
+        AdjListNode(int _v, int _w){ 
+            v = _v; weight = _w;
+        } 
+        int getV()	 { return v; } 
+        int getWeight() { return weight; } 
 }; 
 
 class Graph 
@@ -78,11 +80,10 @@ void Graph::shortestPath(int s)
 		Stack.pop(); 
  
 		list<AdjListNode>::iterator i; 
-		if (dist[u] != INF) 
-		{ 
-		for (i = adj[u].begin(); i != adj[u].end(); ++i) 
-			if (dist[i->getV()] > dist[u] + i->getWeight()) 
-				dist[i->getV()] = dist[u] + i->getWeight(); 
+		if (dist[u] != INF) { 
+            for (i = adj[u].begin(); i != adj[u].end(); ++i) 
+                if (dist[i->getV()] > dist[u] + i->getWeight()) 
+                    dist[i->getV()] = dist[u] + i->getWeight(); 
 		} 
 	} 
 
