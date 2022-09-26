@@ -74,3 +74,22 @@ int main()
 }
 
 //TIME COMPLEXITY: O(V.E)
+
+//input
+// 5 10
+// 0 1 6
+// 0 2 7
+// 1 2 8
+// 1 3 -4
+// 1 4 5
+// 2 3 9
+// 2 4 -3
+// 3 4 7 
+// 3 0 2
+// 4 1 -2
+
+//output:
+// U->V: 4->1  Cost to reach 4from source 0 = 2
+// U->V: 0->2  Cost to reach 0from source 0 = 7
+// U->V: 1->3  Cost to reach 1from source 0 = -2
+// U->V: 2->4  Cost to reach 2from source 0 = 4
