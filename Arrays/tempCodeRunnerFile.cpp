@@ -1,5 +1,3 @@
- // else if(arr[i]!=arr[largest]){
-        //     if(res==-1 || arr[i]>arr[res]){
-        //         res=i;
-        //     }
-        // }
+for(int i=0;i<n-1;i++){
+        cout<<arr[i]<<" ";
+    }
