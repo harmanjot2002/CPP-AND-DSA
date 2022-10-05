@@ -1,8 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int secondLargest(int n,int arr[]){
-    int res=-1,largest=0;
+int secondLargest(int arr[],int n){
+    int res=-1;
+    int largest=0;
     for(int i=1;i<n;i++){
         if(arr[i]>arr[largest]){
             res=largest;
@@ -18,11 +19,13 @@ int secondLargest(int n,int arr[]){
 }
 
 int main(){
-    int n,arr[50];
+     int arr[50],n;
+    cout<<"Enter number of elements in array"<<endl;
     cin>>n;
-    for(int i=1;i<n;i++){
+    cout<<"Enter elements of array"<<endl;
+    for(int i=0;i<n;i++){
         cin>>arr[i];
     }
-    cout<<secondLargest(n,arr);
+    cout<<secondLargest(arr,n);
     return 0;
 }
