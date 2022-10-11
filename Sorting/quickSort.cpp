@@ -1,47 +1,50 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int partition(int arr[],int s,int e){
-    int pivot=arr[s];
-    int cnt=0;
-    for(int i=s+1;i<=e;i++){
-        if(arr[i]<=pivot){
-            cnt++;
-        }
-    }
-    int pivotIndex=s+cnt;
-    swap(arr[pivotIndex],arr[s]);
-    int i=s;int j=e;
-    while(i<pivotIndex && j>pivotIndex){
-        while(arr[i]<pivot){i++;}
-        while(arr[j]>pivot){j--;}
-        if(i<pivotIndex && j>pivotIndex){
-            swap(arr[i++],arr[j--]);
-        }
-    }
-    return pivotIndex;
+int partition(int arr[], int start, int end)
+{
+
+	int pivot = arr[end];
+	int i = start -1;
+	for (int j = start; j < end; ++j)
+	{
+		if(arr[j]<pivot){
+			i++;
+			swap(arr[i],arr[j]);
+		}
+	}
+	i++;
+	swap(arr[i],arr[end]);
+	return i;
 }
 
-int quickSort(int arr[],int s,int e){
-    
-    int p=partition(arr,s,e);
-    quickSort(arr,s,p-1);
-    quickSort(arr,p+1,e);
-    
+void quickSort(int arr[], int start, int end)
+{
+
+	if(start<end){
+		int pi = partition(arr,start,end);
+		quickSort(arr,start,pi-1);
+		quickSort(arr,pi+1,end);
+	}
 }
 
-int main(){
-    
-      int arr[50],n,s,e;
-    cout<<"Enter number of elements in array"<<endl;
-    cin>>n;
-    cout<<"Enter elements of array"<<endl;
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
+
+
+int main()
+{
+
+	int n;
+    cin >> n;
+    int *arr = new int[n];
+    for (int i = 0; i < n; ++i)
+    {
+        cin >> arr[i];
     }
-    cout<<quickSort(arr,0,n-1);
-     for(int i=0;i<n;i++){
-        cout<<arr[i];
-    }
-    return 0;
+	quickSort(arr, 0, n - 1);
+
+	for (int i = 0; i < n; i++) {
+		cout << arr[i] << " ";
+	}
+	delete [] arr;
+	return 0;
 }
