@@ -14,7 +14,7 @@ int partition(int arr[],int s,int e){
     int i=s;int j=e;
     while(i<pivotIndex && j>pivotIndex){
         while(arr[i]<pivot){i++;}
-        while(arr[j]>pivot){j++;}
+        while(arr[j]>pivot){j--;}
         if(i<pivotIndex && j>pivotIndex){
             swap(arr[i++],arr[j--]);
         }
