@@ -49,10 +49,7 @@ void mergeSort(int arr[],int s,int e){
 
     mergeSort(arr,mid+1,e);
     merge(arr,s,e);
-   
 }
-
-
 
 int main(){
      int arr[50],n,s,e;
