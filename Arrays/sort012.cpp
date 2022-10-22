@@ -24,6 +24,7 @@ void sort012(int arr[],int n){
     }
 }
 
+//Ducth National Flag Problem
 int main(){
     int arr[50],n,k;
     cout<<"Enter number of elements in array"<<endl;
