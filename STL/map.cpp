@@ -23,6 +23,6 @@ int main(){
         cout<<i.first<<" "<<i.second<<endl;
     }
 
-    //Implemented using red-black trees,so takes time of O(log n),but in unordered maps implementation is using hashmaps,so time is O(n).
+    //Implemented using red-black trees,so takes time of O(log n),but in unordered maps implementation is using hashmaps,so time is O(1).
     return 0;
 }
