@@ -5,7 +5,7 @@ using namespace std;
 int main(){
     //set stores unique element.
     //set uses BST ,once added element cannot be modified,it is only deleted,it stores elements in increasing order.
-    //set is slower than unordered_set.Elements fetched from unordered_set doesn't come insorted orer,they are random.
+    //set is slower than unordered_set.Elements fetched from unordered_set doesn't come in sorted ord   er,they are random.
 
     set<int> s;
     s.insert(5);
