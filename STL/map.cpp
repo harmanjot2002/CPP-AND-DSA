@@ -5,6 +5,7 @@ using namespace std;
 int main(){
     //All keys are unique and one key will point to one value only.1 value can have 2 keys,but one key cannot have 2 values.
     //sorted in map
+    //Implemented using red-black trees,so takes time of O(log n),but in unordered maps implementation is using hashmaps,so time is O(1).
     map<int,string> m;
     m[1]="babbar";
     m[13]="love";
@@ -23,6 +24,11 @@ int main(){
         cout<<i.first<<" "<<i.second<<endl;
     }
 
-    //Implemented using red-black trees,so takes time of O(log n),but in unordered maps implementation is using hashmaps,so time is O(1).
+    auto it=m.find(2);
+    for(auto i=it;i!=m.end();i++){
+        cout<<(*i).first<<" ";
+    }
+    cout<<endl;
+    
     return 0;
 }
