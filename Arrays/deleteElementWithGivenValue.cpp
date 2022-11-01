@@ -2,16 +2,14 @@
 using namespace std;
 
 int del(int arr[],int n,int ele){
-    int i;
-    for(i=0;i<=n-1;i++){
+    int idx;
+    for(int i=0;i<=n-1;i++){
         if(arr[i]==ele){
             break;
         }
+        idx=i;
     }
-    if(i==n){
-        return n;
-    }
-    for(int j=i;j<n-1;j++){
+    for(int j=idx;j<n-1;j++){
         arr[j]=arr[j+1];
     }
     for(int i=0;i<n-1;i++){
