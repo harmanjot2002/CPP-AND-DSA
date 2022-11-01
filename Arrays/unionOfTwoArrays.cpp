@@ -10,8 +10,7 @@ void unionSet(int n,int m,int arr1[],int arr2[]){
         s.insert(arr2[j]);
     }
     set<int>::iterator itr;
-    for (itr = s.begin();
-    itr != s.end(); itr++){
+    for (itr = s.begin();itr != s.end(); itr++){
         cout << *itr << " ";
     }
 }
