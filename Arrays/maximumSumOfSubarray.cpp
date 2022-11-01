@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Kadane's Algorithm
 int mxSumSubarr(int arr[],int n){
     int res=arr[0];
     int maxEnding=arr[0];
