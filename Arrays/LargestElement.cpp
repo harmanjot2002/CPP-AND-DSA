@@ -5,7 +5,7 @@ int maxim(int arr[],int n){
     int maxim=INT_MIN;
     for (int i=0;i<n;i++){
         if(arr[i]>maxim){
-            maxim=arr[i];
+            maxim=i;
         };
     }
     return maxim;
