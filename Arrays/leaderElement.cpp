@@ -1,40 +1,18 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include<stack>
 using namespace std;
 
-int leader(int arr[], int n)
-{
-    int curr_leader = arr[n - 1];
-    cout << curr_leader << " ";
-    for (int i = n - 2; i > 0; i--)
-    {
-        if (arr[i] > curr_leader)
-        {
-            curr_leader = arr[i];
-            cout << curr_leader << " ";
+int leader(int arr[],int n){
+    stack<int> st;
+    st.push(arr[n-1]);
+    for(int i=n-2;i>=0;i--){
+        if(arr[i]>st.top()){
+            st.push(arr[i]);
         }
     }
-}
-
-void printLeaders(int arr[], int size)
-{
-    /* create stack to store leaders*/
-    stack<int> sk;
-    sk.push(arr[size - 1]);
-
-    for (int i = size - 2; i > 0; i--)
-    {
-        if (arr[i] > sk.top())
-        {
-            sk.push(arr[i]);
-        }
-    }
-
-    /* print stack elements*/
-    /* run loop till stack is not empty*/
-    while (!sk.empty())
-    {
-        cout << sk.top() << " ";
-        sk.pop();
+    while(!st.empty()){
+        cout<<st.top()<<" ";
+        st.pop();
     }
 }
 
@@ -49,7 +27,5 @@ int main()
         cin >> arr[i];
     }
     leader(arr, n);
-    cout<<endl;
-    printLeaders(arr,n);
     return 0;
 }
