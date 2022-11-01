@@ -2,19 +2,29 @@
 using namespace std;
 
 void sort01(int arr[],int n){
-    int left=0;
-    int right=n-1;
-    if(left<=right){
-        if(arr[left]==0){
-            left++;
-        }
-        if(arr[right]==1){
-            right--;
-        }
-        if(arr[left]==1 && arr[right]==0){
-            swap(arr[left],arr[right]);
-            left++;
-            right--;
+    // int left=0;
+    // int right=n-1;
+    // if(left<=right){
+    //     if(arr[left]==0){
+    //         left++;
+    //     }
+    //     if(arr[right]==1){
+    //         right--;
+    //     }
+    //     if(arr[left]==1 && arr[right]==0){
+    //         swap(arr[left],arr[right]);
+    //         left++;
+    //         right--;
+    //     }
+    // }
+    // for(int i=0;i<n;i++){
+    //     cout<<arr[i]<<" ";
+    // }
+    int count=0;
+    for(int i=0;i<n;i++){
+        if(arr[i]==0){
+            swap(arr[i],arr[count]);
+            count++;
         }
     }
     for(int i=0;i<n;i++){
