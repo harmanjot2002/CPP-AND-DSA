@@ -16,3 +16,5 @@ int main(){
     pairSum(arr,5,6);     
     return 0;
 }
+
+//Time Complexity:O(n^2)
