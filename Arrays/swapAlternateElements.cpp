@@ -3,6 +3,7 @@ using namespace std;
 
 void swapAlternates(int arr[],int n){
     for(int i=0;i<n;i+=2){
+        //If next element exists
         if(i+1<n){
             swap(arr[i],arr[i+1]);
         }
