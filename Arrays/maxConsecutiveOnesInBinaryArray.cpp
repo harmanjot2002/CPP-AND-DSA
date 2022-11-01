@@ -2,7 +2,8 @@
 using namespace std;
 
 int consOnes(int arr[],int n){
-    int res=0,curr=0;
+    int res=0;
+    int curr=0;
     for(int i=0;i<n;i++){
         if(arr[i]==0){
             int curr=0;
