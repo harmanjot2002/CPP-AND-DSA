@@ -44,6 +44,7 @@ int lastOcc(int arr[],int n,int x){
     }
     return -1;
 }
+
 //Here,we are using binary search for 2 times.
 int countOcc(int arr[],int n,int x){
     int first=firstOcc(arr,n,x);
