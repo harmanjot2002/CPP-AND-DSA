@@ -2,8 +2,7 @@
 using namespace std; 
 
 /* Function to find the candidate for Majority */
-int findCandidate(int a[], int size) 
-{ 
+int findCandidate(int a[], int size) { 
 	int maj_index = 0, count = 1; 
 	for (int i = 1; i < size; i++) 
 	{ 
