@@ -26,7 +26,6 @@ void merge(int arr[],int s,int e){
             k++;
         }
     }
-
     while(i<len1){
         arr[k]=a[i];
         i++;
@@ -37,7 +36,6 @@ void merge(int arr[],int s,int e){
         j++;
         k++;
     }
-    
 }
 
 void mergeSort(int arr[],int s,int e){
