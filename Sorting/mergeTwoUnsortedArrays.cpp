@@ -38,6 +38,7 @@ int main(){
     for(int j=0;j<m;j++){
         cin>>arr2[j];
     }
+    
     cout<<mergeAndSort(arr,arr2,n,m);    
     return 0;
 }
