@@ -5,7 +5,7 @@ int mergeAndSort(int arr[],int arr2[],int n,int m){
     int i=0;
     int j=0;
     while(i<n && j<m){
-        if(arr[i]<=arr2[j]){
+        if(arr[i]<arr2[j]){
             cout<<arr[i]<<" ";
             i++;
         }
