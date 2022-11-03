@@ -36,7 +36,7 @@ int main(){
     cin>>m;
     cout<<"Enter elements of second array"<<endl;
     for(int j=0;j<m;j++){
-        cin>>arr[j];
+        cin>>arr2[j];
     }
     cout<<mergeAndSort(arr,arr2,n,m);    
     return 0;
