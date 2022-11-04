@@ -10,8 +10,7 @@ int findCandidate(int a[], int size) {
 			count++; 
 		else
 			count--; 
-		if (count == 0) 
-		{ 
+		if (count == 0) { 
 			maj_index = i; 
 			count = 1; 
 		} 
@@ -22,10 +21,10 @@ int findCandidate(int a[], int size) {
 /* Function to check if the candidate occurs more than n/2 times,i.e,check whether it is majority element or not */
 bool isMajority(int a[], int size, int cand) { 
 	int count = 0; 
-	for (int i = 0; i < size; i++) 
+	for (int i = 0; i < size; i++){ 
 		if (a[i] == cand) 
 			count++; 
-		
+	}
 	if (count > size/2) 
 		return 1; 
 	else
@@ -43,7 +42,6 @@ void printMajority(int a[], int size) {
 	else
 		cout << "No Majority Element"; 
 } 
-
 
 /* Driver function to test above functions */
 int main() { 
