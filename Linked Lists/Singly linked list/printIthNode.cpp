@@ -14,11 +14,13 @@ int printIthNode(Node* head,int i){
    Node* curr=head;
    int count=0;
    while(curr!=NULL){
-    if(count==i){
-        cout<<curr->data;
-    }
-    curr=curr->next;
-    count++;
+        if(count==i){
+            cout<<curr->data;
+        }
+        else{
+            curr=curr->next;
+            count++;
+        }
    }
 }
 
@@ -27,6 +29,5 @@ int main(){
     head->next=new Node(29);
     head->next->next=new Node(34);
     cout<<printIthNode(head,1);
-     
     return 0;
 }
