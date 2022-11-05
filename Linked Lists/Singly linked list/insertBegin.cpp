@@ -10,18 +10,18 @@ struct Node{
     }
 };
 
+Node* insertBegin(Node* head,int x){
+    Node* temp=new Node(x);
+    temp->next=head;
+    return temp;
+}
+
 Node* printList(Node* head){
     Node* curr=head;
     while(curr!=NULL){
         cout<<curr->data<<" ";
         curr=curr->next;
     }
-}
-
-Node* insertBegin(Node* head,int x){
-    Node* temp=new Node(x);
-    temp->next=head;
-    return temp;
 }
 
 int main(){
