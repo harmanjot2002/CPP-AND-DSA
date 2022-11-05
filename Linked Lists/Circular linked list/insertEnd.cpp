@@ -10,15 +10,6 @@ struct Node{
     }
 };
 
-void printList(Node* head){
-    if(head==NULL)
-        return;
-    cout<<head->data<<" ";
-    for(Node* p=head->next;p!=head;p=p->next){
-        cout<<p->data<<" ";
-    }
-}
-
 Node* insertEnd(Node* head,int x){
     Node* temp=new Node(x);
     if(head==NULL){
@@ -31,6 +22,15 @@ Node* insertEnd(Node* head,int x){
     temp->data=head->data;
     head->data=t;
     return temp;
+}
+
+void printList(Node* head){
+    if(head==NULL)
+        return;
+    cout<<head->data<<" ";
+    for(Node* p=head->next;p!=head;p=p->next){
+        cout<<p->data<<" ";
+    }
 }
 
 int main(){
