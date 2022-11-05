@@ -25,6 +25,5 @@ int main(){
     head->next=new Node(29);
     head->next->next=new Node(34);
     cout<<length(head);
-     
     return 0;
 }
