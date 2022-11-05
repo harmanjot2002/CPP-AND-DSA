@@ -11,6 +11,8 @@ struct Node{
 };
 
 Node* delFirst(Node* head){
+    if(head==NULL)
+        return NULL;
     Node* temp=head->next;
     delete head;
     return temp;
