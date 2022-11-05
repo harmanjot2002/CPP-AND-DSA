@@ -10,34 +10,33 @@ struct Node{
     }
 };
 
+Node* delFirst(Node* head){
+    if(head==NULL)
+        return NULL;
+    Node* temp=head->next;
+    delete head;
+    return temp;
+}
+
+Node* delGiven(Node* head,int k){
+    if(head==NULL)
+        return head;
+    if(k==1)
+        return delFirst(head);
+    Node* curr=head;
+    for(int i=0;i<k-2;i++)
+        curr=curr->next;
+    Node* temp=curr->next;
+    curr->next=curr->next->next;
+    delete temp;
+    return head;
+}
+
 void printList(Node* head){
     while(head!=NULL){
         cout<<head->data<<" ";
         head=head->next;
     }
-}
-
-Node* delGiven(Node* head,int pos){
-    if(head==NULL)
-        return head;
-    int count=1;
-    Node* temp=head;
-    if(pos==1){
-        head=temp->next;
-        delete temp;
-        return head;
-    }
-    while(temp!=NULL && count<pos-2){
-        temp=temp->next;
-        count++;
-    }
-    if(temp!=NULL){
-        Node* a=temp->next;
-        Node* b=a->next;
-        temp->next=b;
-        delete a;
-    }
-    return head;
 }
 
 int main(){
