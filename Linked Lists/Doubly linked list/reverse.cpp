@@ -12,13 +12,6 @@ struct Node{
     }
 };
 
-void printList(Node* head){
-    while(head!=NULL){
-        cout<<head->data<<" ";
-        head=head->next;
-    }
-}
-
 Node* reverseLL(Node* head){
     if(head==NULL || head->next==NULL)
         return head;
@@ -31,6 +24,13 @@ Node* reverseLL(Node* head){
         curr=curr->prev;
     }
     return prev->prev;
+}
+
+void printList(Node* head){
+    while(head!=NULL){
+        cout<<head->data<<" ";
+        head=head->next;
+    }
 }
 
 int main(){
