@@ -10,13 +10,6 @@ struct Node{
     }
 };
 
-void printList(Node* head){
-    while(head!=NULL){
-        cout<<head->data<<" ";
-        head=head->next;
-    }
-}
-
 int search(Node* head,int y){
     Node* curr=head;
     int pos=1;
@@ -30,6 +23,13 @@ int search(Node* head,int y){
         }
     }
     return -1;
+}
+
+void printList(Node* head){
+    while(head!=NULL){
+        cout<<head->data<<" ";
+        head=head->next;
+    }
 }
 
 int main(){
