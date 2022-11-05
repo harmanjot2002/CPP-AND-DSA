@@ -9,6 +9,7 @@ struct Node{
         next=NULL;
     }
 };
+
 void printList(Node* head){
     Node* curr=head;
     while(curr!=NULL){
