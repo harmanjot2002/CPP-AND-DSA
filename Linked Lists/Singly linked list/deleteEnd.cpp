@@ -10,13 +10,6 @@ struct Node{
     }
 };
 
-void printList(Node* head){
-    while(head!=NULL){
-        cout<<head->data<<" ";
-        head=head->next;
-    }
-}
-
 Node* delEnd(Node* head){
     if(head==NULL)
         return NULL;
@@ -31,6 +24,13 @@ Node* delEnd(Node* head){
     delete curr->next;
     curr->next=NULL;
     return head;
+}
+
+void printList(Node* head){
+    while(head!=NULL){
+        cout<<head->data<<" ";
+        head=head->next;
+    }
 }
 
 int main(){
