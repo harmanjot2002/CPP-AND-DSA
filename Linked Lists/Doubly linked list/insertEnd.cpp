@@ -12,13 +12,6 @@ struct Node{
     }
 };
 
-void printList(Node* head){
-    while(head!=NULL){
-        cout<<head->data<<" ";
-        head=head->next;
-    }
-}
-
 Node* insertEnd(Node* head,int x){
     Node* temp=new Node(x);
     if(head==NULL){
@@ -31,6 +24,13 @@ Node* insertEnd(Node* head,int x){
     curr->next=temp;
     temp->prev=curr;
     return head;
+}
+
+void printList(Node* head){
+    while(head!=NULL){
+        cout<<head->data<<" ";
+        head=head->next;
+    }
 }
 
 int main(){
