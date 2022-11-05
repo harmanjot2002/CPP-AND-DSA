@@ -10,13 +10,6 @@ struct Node{
     }
 };
 
-void printList(Node* head){
-    while(head!=NULL){
-        cout<<head->data<<" ";
-        head=head->next;
-    }
-}
-
 Node* Reversal(Node* head){
     Node* curr=head;
     Node* prev=NULL;
@@ -27,6 +20,13 @@ Node* Reversal(Node* head){
         curr=next;
     }
     return prev;
+}
+
+void printList(Node* head){
+    while(head!=NULL){
+        cout<<head->data<<" ";
+        head=head->next;
+    }
 }
 
 int main(){
