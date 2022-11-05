@@ -10,15 +10,6 @@ struct Node{
     }
 };
 
-void printList(Node* head){
-    if(head==NULL)
-        return;
-    cout<<head->data<<" ";
-    for(Node* p=head->next;p!=head;p=p->next){
-        cout<<p->data<<" ";
-    }
-}
-
 Node* deleteFirst(Node* head){
     if(head==NULL){
         return NULL;
@@ -46,6 +37,15 @@ Node* deleteAny(Node* head,int k){
     curr->next=curr->next->next;
     delete temp;
     return head;
+}
+
+void printList(Node* head){
+    if(head==NULL)
+        return;
+    cout<<head->data<<" ";
+    for(Node* p=head->next;p!=head;p=p->next){
+        cout<<p->data<<" ";
+    }
 }
 
 int main(){
