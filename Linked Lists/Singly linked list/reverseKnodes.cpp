@@ -10,13 +10,6 @@ struct Node{
     }
 };
 
-void printList(Node* head){
-    while(head!=NULL){
-        cout<<head->data<<" ";
-        head=head->next;
-    }
-}
-
 Node* ReversalByNnodes(Node* head,int k){
     Node* curr=head;
     Node* prev=NULL;
@@ -33,6 +26,13 @@ Node* ReversalByNnodes(Node* head,int k){
         head->next=ReversalByNnodes(next,k);
     }
     return prev;
+}
+
+void printList(Node* head){
+    while(head!=NULL){
+        cout<<head->data<<" ";
+        head=head->next;
+    }
 }
 
 int main(){
