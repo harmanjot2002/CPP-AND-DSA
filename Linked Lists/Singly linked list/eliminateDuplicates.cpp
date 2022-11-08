@@ -9,17 +9,12 @@ struct Node{
         next=NULL;
     }
 };
-void printList(Node* head){
-    while(head!=NULL){
-        cout<<head->data<<" ";
-        head=head->next;
-    }
-}
+
 Node* removeDuplicates(Node* head){
     if(head==NULL)
         return head;
-    Node* temp=head;
     Node* curr=head->next;
+    Node* temp=head;
     while(curr!=NULL){
         if(curr->data==temp->data){
             if(curr->next==NULL)
@@ -33,6 +28,13 @@ Node* removeDuplicates(Node* head){
         }
     }
     return head;
+}
+
+void printList(Node* head){
+    while(head!=NULL){
+        cout<<head->data<<" ";
+        head=head->next;
+    }
 }
 
 int main(){
