@@ -21,12 +21,12 @@ bool isPalindrome(Node *head){
         curr = curr -> next;
     }
     curr = head;
-    while(curr) {
-    	if(curr -> data == st.top()) {
+    while(curr){
+    	if(curr -> data == st.top()){
         	curr = curr -> next;
           	st.pop();
         } 
-        else {
+        else{
         	return false;
         }
     }
