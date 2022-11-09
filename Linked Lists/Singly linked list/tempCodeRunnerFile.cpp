@@ -1,2 +1,0 @@
-if(head==NULL)
-    //     return;
