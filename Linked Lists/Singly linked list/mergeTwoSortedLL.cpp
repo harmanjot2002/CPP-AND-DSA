@@ -10,15 +10,6 @@ struct Node{
     }
 };
 
-void printList(Node* head){
-    if(head==NULL)
-        return;
-    cout<<head->data<<" ";
-    for(Node* p=head->next;p!=head;p=p->next){
-        cout<<p->data<<" ";
-    }
-}
-
 Node* sortedMerge(Node* a,Node* b){
     if(a==NULL)
         return b;
@@ -51,6 +42,15 @@ Node* sortedMerge(Node* a,Node* b){
     else
         tail->next=a;
     return head;
+}
+
+void printList(Node* head){
+    if(head==NULL)
+        return;
+    cout<<head->data<<" ";
+    for(Node* p=head->next;p!=head;p=p->next){
+        cout<<p->data<<" ";
+    }
 }
 
 int main(){
