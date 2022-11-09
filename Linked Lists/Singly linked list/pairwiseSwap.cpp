@@ -10,18 +10,19 @@ struct Node{
     }
 };
 
-void printList(Node* head){
-    while(head!=NULL){
-        cout<<head->data<<" ";
-        head=head->next;
-    }
-}
-
+//Swapping data
 Node* PairwiseSwap(Node* head){
     Node* curr=head;
     while(curr!=NULL && curr->next!=NULL){
         swap(curr->data,curr->next->data);
         curr=curr->next->next;
+    }
+}
+
+void printList(Node* head){
+    while(head!=NULL){
+        cout<<head->data<<" ";
+        head=head->next;
     }
 }
 
