@@ -10,13 +10,6 @@ struct Node{
     }
 };
 
-void printList(Node* head){
-    while(head!=NULL){
-        cout<<head->data<<" ";
-        head=head->next;
-    }
-}
-
 Node* Middle(Node* head){
     if(head==NULL)
         return NULL;
@@ -27,6 +20,14 @@ Node* Middle(Node* head){
         fast=fast->next->next;
     }
     cout<<slow->data;
+}
+
+
+void printList(Node* head){
+    while(head!=NULL){
+        cout<<head->data<<" ";
+        head=head->next;
+    }
 }
 
 int main(){
