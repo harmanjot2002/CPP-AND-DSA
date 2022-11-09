@@ -10,13 +10,6 @@ struct Node{
     }
 };
 
-void printList(Node* head){
-    while(head!=NULL){
-        cout<<head->data<<" ";
-        head=head->next;
-    }
-}
-
 Node* sorted(Node* head,int x){
     Node* temp=new Node(x);
     if(head==NULL){
@@ -33,6 +26,13 @@ Node* sorted(Node* head,int x){
     temp->next=curr->next;
     curr->next=temp;
     return head;
+}
+
+void printList(Node* head){
+    while(head!=NULL){
+        cout<<head->data<<" ";
+        head=head->next;
+    }
 }
 
 int main(){
