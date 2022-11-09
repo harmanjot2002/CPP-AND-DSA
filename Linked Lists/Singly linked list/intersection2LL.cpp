@@ -28,8 +28,8 @@ Node* intersectPoint(Node* head1, Node* head2){
 	}
 	return ptr1;
 }
-void print(Node* node)
-{
+
+void print(Node* node){
 	if (node == NULL)
 		cout << "NULL";
 	while (node->next != NULL) {
