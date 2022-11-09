@@ -10,32 +10,31 @@ struct Node{
     }
 };
 
-void printList(Node* head){
-    while(head!=NULL){
-        cout<<head->data<<" ";
-        head=head->next;
-    }
-}
-
 Node* deleteNnodesAfterM(Node* head,int M,int N){
     Node* curr=head;
-    Node* t;
-    int count;
+    Node* temp;
     while(curr){
-        for (count=1;count<M && curr!=NULL;count++){
+        for (int i=1;i<M && curr!=NULL;i++){
             curr=curr->next;
         }
         if(curr==NULL){
             return NULL;
         }
-        t=curr->next;
-        for(count=1;count<=N && t!=NULL;count++){
-            t=t->next;
+        temp=curr->next;
+        for(int i=1;i<=N && temp!=NULL;i++){
+            temp=temp->next;
         }
-        curr->next=t;
-        curr=t;
+        curr->next=temp;
+        curr=temp;
     }
     return head;
+}
+
+void printList(Node* head){
+    while(head!=NULL){
+        cout<<head->data<<" ";
+        head=head->next;
+    }
 }
 
 int main(){
