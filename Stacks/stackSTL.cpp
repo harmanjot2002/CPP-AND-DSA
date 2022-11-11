@@ -10,6 +10,7 @@ int main(){
     cout<<s.size()<<endl;
     cout<<s.top()<<endl;
     s.pop();
-    cout<<s.top()<<endl;     
+    cout<<s.top()<<endl; 
+        
     return 0;
 }
