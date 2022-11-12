@@ -1,20 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int evalPost(string str)
-{
+int evalPost(string str){
     reverse(str.begin(), str.end());
-    cout << str << endl;
     stack<int> st;
-    for (int i = 0; i < str.length(); i++)
-    {
+    for (int i = 0; i < str.length(); i++){
         char c = str[i];
-        if (c <= '9' && c >= '0')
-        {
+        if (c <= '9' && c >= '0'){
             st.push(c - 48);
         }
-        else
-        {
+        else{
             int ans = st.top();
             st.pop();
             if (c == '+')
@@ -51,8 +46,8 @@ int evalPost(string str)
     }
     return (int(st.top()));
 }
-int main()
-{
+
+int main(){
     string str = "+9*126";
     cout << evalPost(str) << endl;
     return 0;
