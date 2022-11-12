@@ -1,30 +1,30 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main(){
-    cout<<"Enter string to be checked: "<<endl;
-    string s;
-    cin>>s;
+bool checkRedundantParenthesis(string str){
     stack<char> st;
-    bool ans=false;
-    for(int i=0;i<s.size();i++){
-        if(s[i]=='+' || s[i]=='-' ||s[i]=='*' ||s[i]=='/'){
-            st.push(s[i]);
+    for(int i=0; i<str.size(); i++){
+        if(str[i]=='+' || str[i]=='-' || str[i]=='*' || str[i]=='/' || str[i]=='('){
+            st.push(str[i]);
         }
-        else if(s[i]=='('){
-            st.push(s[i]);
-        }
-        else if(s[i]==')'){
+        else if(str[i]==')'){
             if(st.top()=='('){
-                ans=true;
+                return true;
             }
-            while(st.top()=='+' || st.top()=='-' || st.top()=='*' ||st.top()=='/'){
+            while(st.top()=='+' || str[i]=='-' || str[i]=='*' || str[i]=='/'){
                 st.pop();
             }
             st.pop();
         }
     }
-    cout<<ans;
+    return false;
+}
+
+int main(){
+    cout<<"Enter string to be checked: "<<endl;
+    string s;
+    cin>>s;
+    cout<<checkRedundantParenthesis(s);
     return 0;
 }
 
