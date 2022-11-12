@@ -1,4 +1,5 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<stack>
 using namespace std;
 
 bool isMatching(char a,char b){
@@ -16,7 +17,7 @@ bool isBalanced(string str){
             s.push(str[i]);
         }
         else{
-            if(s.empty()==true)
+            if(s.empty())
                 return false;
             else if(isMatching(s.top(),str[i])==false)
                 return false;
