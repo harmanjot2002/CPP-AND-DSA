@@ -9,6 +9,7 @@ struct TwoStacks{
         top1=-1;
         top2=cap;
     }
+    
     void push1(int x){
         if(top1<top2-1){
             top1++;
@@ -27,6 +28,7 @@ struct TwoStacks{
             cout<<"Overflow";
         }
     }
+
     int pop1(){
         if(top1>=0){
             int x=arr[top1];
