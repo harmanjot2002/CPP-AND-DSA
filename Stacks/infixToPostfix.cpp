@@ -20,27 +20,25 @@ void infiToPost(string str){
         if((c<='z' && c>='a') || (c<='Z' && c>='A')){
             result+=c;
         }
-        else{
-            if(c=='('){
-                s.push('(');
-            }
-            else if(c==')'){
-                while(s.top()!='('){
-                    result+=s.top();
-                    s.pop();
-                }
+        else if(c=='('){
+            s.push('(');
+        }
+        else if(c==')'){
+            while(s.top()!='('){
+                result+=s.top();
                 s.pop();
             }
-            else{
-                while((s.empty()==false) && (prec(c)<=prec(s.top()))){
-                    result+=s.top();
-                    s.pop();
-                }
-                s.push(c);
+            s.pop();
+        }
+        else{
+            while((s.empty()==false) && (prec(c)<=prec(s.top()))){
+                result+=s.top();
+                s.pop();
             }
+            s.push(c);
         }
     }
-    while(s.empty()==false){
+    while(!s.empty()){
         result+=s.top();
         s.pop();
     }
@@ -48,7 +46,8 @@ void infiToPost(string str){
 }
 
 int main(){
-    string str = "a+b*c";
+    string str = "((a+((b*c)/d))+e)";
     infiToPost(str); 
     return 0;
+    //Output:abc*d/+e+
 }
