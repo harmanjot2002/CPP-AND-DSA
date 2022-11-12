@@ -1,4 +1,6 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<stack>
+#include<algorithm>
 using namespace std;
 
 int prec(char c){
@@ -12,8 +14,7 @@ void infiToPre(string s){
     reverse(s.begin(),s.end());
     stack<char> st;
     string result;
-    for (int i = 0; i < s.length(); i++)
-    {
+    for (int i = 0; i < s.length(); i++){
         char c = s[i];
         if(c <= 'z' && c >= 'a' || c <= 'Z' && c >= 'A'){
             result += c;
