@@ -3,23 +3,31 @@ using namespace std;
 
 void reverseStack(stack<int> s){
     stack<int> st;
-    int size = s.size();
-    for (int i = 0; i < size; i++)
-    {
-        int res = s.top();
+    while(!s.empty()){
+        st.push(s.top());
         s.pop();
-        st.push(res);
     }
-    int isze = st.size();
-    for (int i = 0; i < isze; i++)
-    {
-        cout << st.top() << " ";
+    while(!st.empty()){
+        cout<<st.top()<<" ";
         st.pop();
-    }    
+    }
+    // stack<int> st;
+    // int size = s.size();
+    // for (int i = 0; i < size; i++){
+    //     int res = s.top();
+    //     s.pop();
+    //     st.push(res);
+    // }
+    // int isze = st.size();
+    // for (int i = 0; i < isze; i++)
+    // {
+    //     cout << st.top() << " ";
+    //     st.pop();
+    // }    
 }
 
 void before(stack<int>s){
-    while(s.empty()==false){
+    while(!s.empty()){
         cout<<s.top()<<" ";
         s.pop();
     } 
