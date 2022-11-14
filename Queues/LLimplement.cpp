@@ -9,6 +9,7 @@ struct Node{
         next=NULL;
     }
 };
+
 struct Queue{
     Node* front;
     Node* rear;
