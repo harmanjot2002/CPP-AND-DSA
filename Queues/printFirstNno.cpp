@@ -5,7 +5,7 @@ void printFirstN(int n){
     queue<string>q;
     q.push("5");
     q.push("6");
-    for(int count=0;count<n;count++){
+    for(int count=0 ; count<n ; count++){
         string curr=q.front();
         cout<<curr<<" ";
         q.pop();
