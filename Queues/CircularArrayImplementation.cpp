@@ -32,19 +32,21 @@ struct Queue{
         }
         return true;
     }  
-    
+
     int getFront(){
-        if(front==-1){
+        if(front==rear==-1){
             cout<<"Queue is empty";
         }
         return arr[front];
     }
+    
     int getRear(){
         if(front==rear==-1){
             cout<<"Queue is empty";
         }
         return arr[rear];
     }
+    
     int Dequeue(){
         if(front==-1){
             cout<<"Queue is empty";
