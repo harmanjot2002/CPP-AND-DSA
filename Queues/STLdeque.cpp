@@ -3,6 +3,7 @@
 using namespace std;
 
 int main(){
+    //Doubly ended queue
     deque<int>d;
     d.push_front(34);
     d.push_back(12);
