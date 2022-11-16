@@ -19,6 +19,7 @@ struct Queue{
         rear=NULL;
         size=0;
     }
+    
     void enqueue(int x){
         Node* temp=new Node(x);
         size++;
