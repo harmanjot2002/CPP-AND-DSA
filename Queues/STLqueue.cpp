@@ -14,6 +14,7 @@ int main(){
     q.pop();
     cout<<"Front of q is: "<<q.front()<<endl;
     cout<<"Size of queue is: "<<q.size()<<endl;
+    
     if(q.empty()){
         cout<<"Queue is empty "<<endl;
     }
