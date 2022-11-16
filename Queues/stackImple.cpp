@@ -3,7 +3,6 @@ using namespace std;
 
 struct Stack{
     queue<int>q1,q2;
-    
     int top(){
         return q1.front();
     }
