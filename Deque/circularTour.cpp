@@ -12,7 +12,12 @@ int firstPetrolPump(int petrol[],int dist[],int n){
             curr_pet=0;
         }
     }
-    return ((curr_pet+prev_pet)>=0)?(start+1):-1;
+    if((curr_pet+prev_pet)>=0){
+        return (start+1);
+    }
+    else{
+        return -1;
+    }
 }
 
 int main(){
