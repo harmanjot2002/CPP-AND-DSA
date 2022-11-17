@@ -11,6 +11,7 @@ struct Deque{
         arr=new int[size];
         rear=front=-1;
     }
+    
     bool push_back(int data){
         if((front==0 && rear==size-1) || (rear==(front-1)%(size-1))){
             cout<<"Queue is full"<<endl;
