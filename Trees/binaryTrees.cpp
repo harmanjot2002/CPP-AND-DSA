@@ -11,6 +11,7 @@ struct Node{
     }
 };
 
+
 int main(){
     Node* root=new Node(10);
     root->left=new Node(20);
