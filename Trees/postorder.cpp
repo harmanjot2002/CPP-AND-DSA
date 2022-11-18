@@ -11,6 +11,7 @@ struct Node{
     }
 };
 
+
 void postorder(Node* root){
     if(root!=NULL){
         postorder(root->left);
