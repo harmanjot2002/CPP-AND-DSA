@@ -12,8 +12,8 @@ struct Node{
 };
 
 void spiral(Node* root){
-   if(root==NULL)
-    return;
+    if(root==NULL)
+        return;
     queue<Node*>q;
     stack<int>s;
     bool reverse=false;
