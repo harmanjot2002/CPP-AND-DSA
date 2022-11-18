@@ -11,8 +11,7 @@ struct Node{
     }
 };
 
-void printInorder(Node* Node)
-{
+void printInorder(Node* Node){
     if (Node == NULL)
         return;
     printInorder(Node->left);
