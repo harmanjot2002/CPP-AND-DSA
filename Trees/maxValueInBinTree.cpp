@@ -10,7 +10,7 @@ struct Node{
         left=right=NULL;
     }
 };
-
+ 
 int getmax(Node* root){
     if(root==NULL)
         return INT_MIN;
