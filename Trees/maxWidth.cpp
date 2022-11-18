@@ -15,7 +15,7 @@ int maxWidth(Node* root){
     if(root==NULL){
             return 0;
     }
-    queue<Node*>q;
+    queue<Node*> q;
     q.push(root);
     int res=0;
     while(!q.empty()){
