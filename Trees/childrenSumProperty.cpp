@@ -10,7 +10,7 @@ struct Node{
         left=right=NULL;
     }
 };
-
+ 
 bool isCSum(Node* root){
     if(root==NULL)
         return true;
