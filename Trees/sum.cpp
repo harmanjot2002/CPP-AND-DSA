@@ -11,6 +11,7 @@ struct Node{
     }
 };
 
+
 int getSum(Node* root){
     if(root==NULL)
         return 0;
