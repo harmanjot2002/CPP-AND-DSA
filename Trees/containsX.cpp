@@ -14,7 +14,7 @@ struct Node{
 bool containsX(Node* root,int x){
     if(root==NULL)
         return false;
-    queue<Node*>q;
+    queue<Node*> q;
     q.push(root);
     while(!q.empty()){
         Node* curr=q.front();
