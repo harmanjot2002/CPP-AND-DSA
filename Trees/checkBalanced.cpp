@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 struct Node{
@@ -24,7 +24,7 @@ int checkBalanced(Node* root){
     if(rh==-1){
         return -1;
     }
-    
+
     if(abs(lh-rh)>1){
         return -1;
     }
