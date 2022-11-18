@@ -14,7 +14,7 @@ struct Node{
 void printLevelLineByLine(Node* root){
    if(root==NULL)
         return;
-    queue<Node*>q;
+    queue<Node*> q;
     q.push(root);
     while(!q.empty()){
         int count=q.size();
