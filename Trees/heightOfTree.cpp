@@ -10,7 +10,7 @@ struct Node{
         left=right=NULL;
     }
 };
-
+    
 int height(Node* root){
     if(root==NULL)
         return 0;
