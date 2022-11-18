@@ -13,8 +13,8 @@ struct Node{
 
 void printLevel(Node* root){
    if(root==NULL)
-    return;
-    queue<Node*>q;
+        return;
+    queue<Node*> q;
     q.push(root);
     while(!q.empty()){
         Node* curr=q.front();
