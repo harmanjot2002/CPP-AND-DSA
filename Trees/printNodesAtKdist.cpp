@@ -10,7 +10,7 @@ struct Node{
         left=right=NULL;
     }
 };
-
+ 
 void printKdist(Node* root,int k){
     if(root==NULL)
         return;
