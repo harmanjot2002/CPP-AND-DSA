@@ -10,7 +10,7 @@ struct Node{
         left=right=NULL;
     }
 };
-
+ 
 bool search(Node* root,int x){
     while(root!=NULL){
         if(root->key==x){
