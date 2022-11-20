@@ -26,7 +26,7 @@ Node* ciel(Node* root,int x){
     }
     return res;
 }
-
+ 
 int main(){
     Node* root=new Node(50);
     root->left=new Node(20);
