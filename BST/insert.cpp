@@ -28,7 +28,7 @@ Node* insert(Node* root,int x){
         root->left=insert(root->left,x);
     return root;    
 }
-
+ 
 int main(){
     Node* root=new Node(50);
     root->left=new Node(20);
