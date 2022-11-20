@@ -18,7 +18,7 @@ void inorder(Node* root){
         inorder(root->right);
     }   
 }
-
+ 
 Node* getSuccessor(Node* curr){
     curr=curr->right;
     while(curr!=NULL && curr->left!=NULL){
