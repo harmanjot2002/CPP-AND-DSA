@@ -1,7 +1,7 @@
 #include<iostream>
 #include<set>
 using namespace std;
-
+ 
 int main(){
     set<int>s;
     s.insert(10);
