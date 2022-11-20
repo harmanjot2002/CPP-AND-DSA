@@ -10,7 +10,7 @@ struct Node{
         left=right=NULL;
     }
 };
-
+ 
 Node* floor(Node* root,int x){
     Node* res=NULL;
     while(root!=NULL){
