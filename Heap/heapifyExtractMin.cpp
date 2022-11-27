@@ -1,15 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class MinHeap
-{
+class MinHeap{
     int *arr;
     int size;
     int capacity;
 
 public:
-    MinHeap(int c)
-    {
+    MinHeap(int c){
         size = 0;
         capacity = c;
         arr = new int[c];
@@ -18,21 +16,18 @@ public:
     int right(int i) { return (2 * i + 2); }
     int parent(int i) { return (i - 1) / 2; }
 
-    void insert(int x)
-    {
+    void insert(int x){
         if (size == capacity)
             return;
         size++;
         arr[size - 1] = x;
-        for (int i = size - 1; i != 0 && arr[parent(i)] > arr[i];)
-        {
+        for (int i = size - 1; i != 0 && arr[parent(i)] > arr[i];){
             swap(arr[i], arr[parent(i)]);
             i = parent(i);
         }
     }
 
-    void minHeapify(int i)
-    {
+    void minHeapify(int i){
         int lt = left(i);
         int rt = right(i);
         int smallest = i;

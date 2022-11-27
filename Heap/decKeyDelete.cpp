@@ -1,15 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class MinHeap
-{
+class MinHeap{
     int *arr;
     int size;
     int capacity;
 
 public:
-    MinHeap(int c)
-    {
+    MinHeap(int c){
         size = 0;
         capacity = c;
         arr = new int[c];

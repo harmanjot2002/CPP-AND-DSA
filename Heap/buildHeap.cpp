@@ -1,6 +1,6 @@
 #include <bits/stdc++.h> 
 using namespace std; 
-
+ 
 class MinHeap{
     int *arr;
     int size;
@@ -18,8 +18,7 @@ class MinHeap{
     int right(int i) { return (2*i + 2); } 
     int parent(int i) { return (i-1)/2; } 
     
-    void minHeapify(int i) 
-    { 
+    void minHeapify(int i) { 
     int lt = left(i); 
     int rt = right(i); 
     int smallest = i; 
