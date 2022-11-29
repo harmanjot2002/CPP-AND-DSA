@@ -7,7 +7,7 @@ void fun(int n){
         fun(n-1);
     }
 }
-
+ 
 int main(){
     fun(5);   
     return 0;
