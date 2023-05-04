@@ -22,4 +22,4 @@ public:
         cout << sum;
         return sum;
     }
-};
+}; 
