@@ -5,4 +5,4 @@ public:
         double ans=pow(x,n);
         return ans;
     }
-};
+}; 
