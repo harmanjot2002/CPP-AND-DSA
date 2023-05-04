@@ -9,5 +9,5 @@ public:
             }
         }
         return i;
-    }
-};
+    } 
+}; 
